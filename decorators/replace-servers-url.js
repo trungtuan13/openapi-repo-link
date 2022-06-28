@@ -6,7 +6,7 @@ function ReplaceServersURL() {
   return {
     Server: {
       leave(Server) {
-          Server.url = 'https://titus-testing.com';
+          Server.url = 'https://titus-check-updating.com';
       }
     }
 //    ,

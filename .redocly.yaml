@@ -1,7 +1,7 @@
 # See https://redocly.com/docs/cli/configuration/ for more information.
 apis:
-  sample@online:
-    root: https://petstore3.swagger.io/api/v3/openapi.json
+  titus-updating@online:
+    root: https://raw.githubusercontent.com/trungtuan13/public-testing-repo/main/swagger.json
   sample@internal:
     root: openapi/hs-openapi.yaml
   sample@external:
