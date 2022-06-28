@@ -1,0 +1,35 @@
+# See https://redocly.com/docs/cli/configuration/ for more information.
+apis:
+  sample@online:
+    root: https://petstore3.swagger.io/api/v3/openapi.json
+  sample@internal:
+    root: openapi/hs-openapi.yaml
+  sample@external:
+    root: openapi/hs-openapi.yaml
+    lint:
+      decorators:
+        remove-x-internal: on
+lint:
+  extends:
+    - recommended
+  plugins:
+    - 'plugins/demo-plugin.js'
+  decorators:
+    demo/replace-servers-url: error
+#    demo/remove-all-authentications: error
+  rules:
+    no-unused-components: warning
+features.openapi:
+  showConsole: true
+  htmlTemplate: ./docs/index.html
+  theme:
+    colors:
+      primary:
+        main: "#32329f"
+  generateCodeSamples:
+    languages:  # Array of language config objects; indicates in which languages to generate code samples.
+      - lang: curl
+      - lang: Node.js
+      - lang: JavaScript
+      - lang: PHP
+      - lang: Python
